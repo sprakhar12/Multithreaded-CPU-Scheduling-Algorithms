@@ -1,7 +1,9 @@
 # Multithreaded-CPU-Scheduling-Algorithms
--- Operating System Course Project --
+-- Operating System Course Project in Java --
 
-CPU scheduling algorithms through process/thread synchronization mechanisms by implementing a multithreaded program that allow to measure the performance (i.e. CPU utilization, Throughput, Turnaround time, Waiting time and Response time) of three basic CPU scheduling algorithms ( FIFO, SJF and PR) by simulating the processes whose priority, sequence of CPU burst time (ms) and I/O burst time (ms) given in an input file.
+**Prog.java is the entry point**
+
+CPU scheduling algorithms through process/thread synchronization mechanisms by implementing a multithreaded program that allow to measure the performance (i.e. CPU utilization, Throughput, Turnaround time, Waiting time and Response time) of four basic CPU scheduling algorithms ( FIFO, SJF, PR and RR) by simulating the processes whose priority, sequence of CPU burst time (ms) and I/O burst time (ms) given in an input file. **However, only FIFO, SJF and PR were implemented**
 
 <p><strong>ASSUMPTIONS</strong><br>
   
@@ -15,3 +17,6 @@ CPU scheduling algorithms through process/thread synchronization mechanisms by i
 1.	CPU scheduler thread will check ready queue; if there is a process, it will pick one according to the scheduling algorithm from ready queue and hold CPU resource for the given CPU burst time. Then it will release CPU resource and put this process into IO queue or just terminate if there is no more CPU or IO burst. Then CPU scheduler thread will check ready queue again and repeat the same.<br>
 2.	 I/O system thread will check IO queue; if there is a process, it will hold IO device for the given IO burst time and then put this process back into ready queue. Then it will check IO queue and repeat the same.
 </p>
+
+<strong>Java Command to Run</strong><br>
+java Prog prog -alg FIFO -input Input / java Prog prog -alg SJF -input Input / java Prog prog -alg PR -input Input
